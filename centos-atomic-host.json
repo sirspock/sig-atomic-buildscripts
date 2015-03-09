@@ -9,7 +9,9 @@
                  "rsync", "tmux", "net-tools", "nmap-ncat", "bind-utils", "git",
                  "sysstat", "policycoreutils-python", "setools-console", "docker",
                  "audit", "cloud-init", "cloud-utils-growpart",
-                 "cockpit", "kubernetes", "etcd", "cadvisor"],
+		 "glusterfs", "glusterfs-fuse", "glusterfs-server",
+                 "cockpit", "kubernetes", "etcd", "cadvisor"
+		],
 
     "units": ["docker.service", "cockpit.socket"],
     "default_target": "multi-user.target"

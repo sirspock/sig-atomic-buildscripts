@@ -5,7 +5,7 @@ timezone --utc Etc/UTC
 
 auth --useshadow --enablemd5
 selinux --enforcing
-rootpw --lock --iscrypted locked
+rootpw --iscrypted $1$pRRznUXm$9gOJmaj7gjKDKmoXvBt9p0
 user --name=none
 
 firewall --disabled
@@ -39,7 +39,6 @@ ostree remote add --set=gpg-verify=false centos-atomic-host 'http://buildlogs.ce
 
 # older versions of livecd-tools do not follow "rootpw --lock" line above
 # https://bugzilla.redhat.com/show_bug.cgi?id=964299
-passwd -l root
 # remove the user anaconda forces us to make
 userdel -r none
 
